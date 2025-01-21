@@ -17,5 +17,12 @@
     "@semantic-release/release-notes-generator": "^14.0.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
