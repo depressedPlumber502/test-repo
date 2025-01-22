@@ -3,14 +3,17 @@ const config = {
   branches: ["main"],
   plugins: [
     [
-      "@semantic-release/commit-analyzer",
-      { preset: "conventionalcommits",releaseRules: [{ breaking: true, release: "minor" }] },
+      "semantic-release-unsquash",
+      {
+        preset: "conventionalcommits",
+        releaseRules: [{ breaking: true, release: "minor" }],
+      },
     ],
     [
       "@semantic-release/release-notes-generator",
       {
         preset: "conventionalcommits",
-      }
+      },
     ],
     "@semantic-release/github",
     "@semantic-release/npm",
@@ -24,6 +27,6 @@ const config = {
       },
     ],
   ],
-}
+};
 
-module.exports = config
+module.exports = config;
