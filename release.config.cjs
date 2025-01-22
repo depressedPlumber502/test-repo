@@ -3,15 +3,16 @@ const config = {
   branches: ["main"],
   plugins: [
     [
-      "semantic-release-unsquash",
+      "@semantic-release/commit-analyzer",
       {
-        commitAnalyzerConfig: {
-          preset: "conventionalcommits",
-          releaseRules: [{ breaking: true, release: "minor" }],
-        },
-        notesGeneratorConfig: {
-          preset: "conventionalcommits",
-        },
+        preset: "conventionalcommits",
+        releaseRules: [{ breaking: true, release: "minor" }],
+      },
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        preset: "conventionalcommits",
       },
     ],
     "@semantic-release/github",
