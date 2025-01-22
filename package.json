@@ -1,6 +1,6 @@
 {
   "name": "@dp502tst/test-repo",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "",
   "scripts": {
     "build": "tsc --outDir dist index.ts"
