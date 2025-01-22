@@ -5,14 +5,13 @@ const config = {
     [
       "semantic-release-unsquash",
       {
-        preset: "conventionalcommits",
-        releaseRules: [{ breaking: true, release: "minor" }],
-      },
-    ],
-    [
-      "@semantic-release/release-notes-generator",
-      {
-        preset: "conventionalcommits",
+        commitAnalyzerConfig: {
+          preset: "conventionalcommits",
+          releaseRules: [{ breaking: true, release: "minor" }],
+        },
+        notesGeneratorConfig: {
+          preset: "conventionalcommits",
+        },
       },
     ],
     "@semantic-release/github",
